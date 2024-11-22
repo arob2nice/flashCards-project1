@@ -1,1 +1,1 @@
-# This is the sign up page ReadMe.
+# This is the ReadMe.
