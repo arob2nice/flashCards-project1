@@ -3,18 +3,226 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./assets/style.css">
     <title>You Got This!</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
-    <!-- Your content here -->
-    <header class="navbar">
-        <nav>
-            <a href="">Sign Up</a>
-            <a href="">My Decks</a>
+
+    <style>
+        .navbar-nav {
+            margin-left: auto;
+            display: flex;
+            flex-direction: row;
+        }
+        .btn {
+            margin-top: 15px;
+            margin-right: auto;
+        }
+        .container-fluid {
+        }
+        .container-fluid h2 {
+            display: flex;
+            justify-content: center;
+        }
+        .study-foot {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .flash {
+            display: flex;
+            justify-content: center;
+            padding-top: 75px;
+            background-color: white;
+            height: 300px;
+        }
+        .nav-buttons {
+            display: flex;
+            justify-content: space-evenly;
+            margin: 20px;
+        }
+        #backwards, #forwards {
+            font-size: 30px;
+            background-color: #f8f9fa;
+            border: none;
+            margin: 10px;
+        }
+        .mark-buttons {
+          text-align: center;
+        }
+        #test {
+            margin: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .d-grid {
+            text-align: center;
+            margin: auto;
+        }
+        #backwards:hover, #forwards:hover {
+            background-color: black;
+            color: white;
+        }
+        #backwards, #forwards {
+            border: solid 1px black;
+            border-radius: 7px;
+            width: 50px;
+            height: 50px;
+            padding: auto;
+            position: relative;
+            margin-top: 70px;
+        }
+        .study-foot{
+            background-color: white;
+            color: black;
+        }
+        .mark{
+            height:200px;
+            background-color: white;
+        }
+        .card-wrapper {
+              width: 25rem;
+              height: 200px;
+            }
+		.card-body {
+              position: relative;
+              width: 100%;
+              height: 100%;
+              text-align: center;
+              transition: transform 0.6s;
+              transform-style: preserve-3d;
+              box-shadow: 0 15px 35px rgba(0,0,0,0.2),0 5px 15px rgba(0,0,0,0.19);
+			}
+		#card-front, #card-back {
+              background-color: #ffffff;
+      		  position: absolute;
+              width: 100%;
+              height: 100%;
+              backface-visibility: hidden;
+              -webkit-backface-visibility: hidden;
+			}
+		#card-front p, #card-back p {
+              position: relative;
+              top: 50%;
+              transform: translateY(-50%);
+              font-size: large;
+              margin: 0;
+			}
+		#card-back {
+              transform: rotateX(180deg);
+			}
+		.card-wrapper:hover .card-body {
+              transform: rotateX(180deg);
+			}
+        #carouselExample{
+            width: 300px;
+            height: 300px;
+        }
+        .cE{
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Quiz Me</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Sign Up</a>
+                  </li>
+                 <li class="nav-item">
+                        <a class="nav-link" href="#">Log In</a>
+                 </li>
+                 <li class="nav-item">
+                    <a class="nav-link" href="#">My Decks</a>
+                 </li>
+                </ul>
+              </div>
+            </div>
         </nav>
-        <h1>QuizMe</h1>
     </header>
-    <script src="./assets/script.js"></script>
+    <div class="container-fluid">
+        <button type="button" class="btn btn-outline-dark">Back to My Decks</button>
+        <h2> ____ Deck </h2>
+        <div class="cE">
+        <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="https://placehold.co/200x200" class="d-block w-100" alt="">
+              </div>
+              <div class="carousel-item">
+                <img src="https://placehold.co/200x200" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="https://placehold.co/200x200" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+    </div>
+    <div class="flash">
+        <div class="nav-buttons">
+            <button id="backwards">&lt;</button>
+              <div class="card-wrapper">
+                <div class="card-body">
+                    <div id="card-front">
+                        <p>Sample Card</p>
+                    </div>
+                    <div id="card-back">
+                        <p>Sample Card Definition</p>
+                    </div>
+                </div>
+            </div>
+            <button id="forwards">&gt;</button>
+        </div>
+    </div>
+    <div class="mark">
+            <label for="mark" id="test"> Lets test your skills. How did you do?</label>
+            <div class="d-grid gap-2 d-md-block">
+                <button class="btn btn-outline-success" type="button">&#10003</button>
+                <button class="btn btn-outline-danger" type="button">&#10005</button>
+            </div>
+     </div>
+    <footer class="study-foot">
+        <p>Happy Studying!</p>
+        <p>QuizMe &copy; 2024</p>
+    </footer>
+   <!--
+    flashcard.addEventListener("click", () => {
+        isShowingAnswer = !isShowingAnswer;
+        updateFlashcard();
+    });
+    
+    // Show the previous card
+    prevButton.addEventListener("click", () => {
+        if (currentCardIndex > 0) {
+            currentCardIndex--;
+            isShowingAnswer = false;
+            updateFlashcard();
+        }
+    });
+    
+    // Show the next card
+    nextButton.addEventListener("click", () => {
+        if (currentCardIndex < flashcards.length - 1) {
+            currentCardIndex++;
+            isShowingAnswer = false;
+            updateFlashcard();
+        }
+    });--> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
