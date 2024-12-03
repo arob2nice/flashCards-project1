@@ -20,7 +20,13 @@
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                   <li class="nav-item">
-                    <a class="nav-link" href="#">My Decks</a>
+                    <a class="nav-link active" aria-current="page" href="signup.html">Sign Up</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="login.html">Login</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="/Users/tanyapunater/Desktop/GWU/myrepos/flashCards-project1/createDeckModal/createDeckModal.html">My Decks</a>
                   </li>
                 </ul>
               </div>
@@ -36,14 +42,27 @@
                 
                 <div class="text-center">
                     <h1>Welcome to QuizMe!</h1>
-                    <p class="lead">Test your knowledge with our quizzes.  <span class="bold">Please log in with your email and password.</span></p>
+                    <p class="lead">Test your knowledge with our quizzes</p>
                 </div>
                 
                 <div class="row justify-content-center my-5">
                     <div class="col-1g-20">
                         
                         <form id="signUpForm">
+                            
+                                <label for="name" class="form-label">Name:</label>
+                                <div class="mb-4 input-group">
+                                    <span class="input-group-text">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                                            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                                          </svg> 
+                                    </span>
+                                    <input type="text" autocomplete="name" class="form-control" id="name" placeholder="e.g. John Doe">
+                                </div>
                                
+                            
+                            
                                 <label for="email" class="form-label">Email Address:</label>
                                 <div class="input-group mb-4">
                                     <span class="input-group-text">
@@ -67,12 +86,30 @@
                                     <input type="password" class="form-control" id="password" placeholder="Password">
 
                                 </div>  
-                            
-                            <button id="signUpButton" type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="signUpModal">
-                                Log In
-                            </button>
-                          </form>
+                                    
+                                
+                                <label for="confirmPassword" class="form-label">Confirm Password:</label>
+                                <div class="input-group mb-4">
+                                    <span class="input-group-text">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-left-dots" viewBox="0 0 16 16">
+                                            <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                                            <path d="M5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0m4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                                          </svg>
+                                    </span>
+                                    <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password">
 
+                                </div>
+                               
+                                <div id="liveAlertPlaceholder">
+                                    <!-- This is where our live alerts will go. -->
+                                      
+                                </div>
+                                <button id="signUpButton" onclick="showAlertAndSubmit()" type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="signUpModal">
+                                    Sign Up
+                                </button>
+                           
+                          </form>
+          
                     </div>
                 </div>
              
@@ -86,6 +123,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/script.js"></script>
-    <script src="./assets/js/modal.js"></script>
+  
 </body>
 </html>
