@@ -66,6 +66,7 @@ let decks = JSON.parse(localStorage.getItem('decks')) || [];
     }
     renderDecks();
 
+      // loading user's name in the deck page
         document.addEventListener('DOMContentLoaded', function() {
           const userInfo = JSON.parse(localStorage.getItem('userInfo'));
           if (userInfo && userInfo.username) {
