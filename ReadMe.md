@@ -8,7 +8,7 @@
 
 
   <p align="center">
-    QuizMe, an application designed to help students study by the use of flashcards. Our vision for QuizMe is to allow users the ability to create a variety of flashcard decks manually in which they’ll be able to navigate through each deck, next and previous, and reveal each answer with the click of the current card. QuizMe scores each study session by manual input from the user selecting if they knew the answer or not. 
+    QuizMe, an application designed to help students study by the use of flashcards. Our vision for QuizMe is to allow users the ability to create a variety of flashcard decks manually in which they’ll be able to navigate through each deck, next and previous, and reveal each answer when hovering over the current card.
 
   </p>
 </div>
