@@ -307,7 +307,61 @@ console.log(decks);
             updateFlashcard();
         });*/
     
-    </script>
+document.addEventListener('DOMContentLoaded', () => {
+    const params = new URLSearchParams(window.location.search);
+    const deckIndex = params.get('deckIndex');
+
+    if (deckIndex !== null) {
+        const decks = JSON.parse(localStorage.getItem('decks')) || [];
+        const selectedDeck = decks[deckIndex];
+
+        if (selectedDeck) {
+            document.getElementById('deckheader').textContent = `${selectedDeck.name}`;
+            updateFlashcard(selectedDeck.cards);
+            setupNavigation(selectedDeck.cards);
+        }
+    }
+});
+
+function updateFlashcard(cards) {
+    const cardFront = document.getElementById('card-front').querySelector('p');
+    const cardBack = document.getElementById('card-back').querySelector('p');
+
+    if (cards.length > 0) {
+        cardFront.textContent = cards[currentCardIndex]?.question || 'No question';
+        cardBack.textContent = cards[currentCardIndex]?.answer || 'No answer';
+    } else {
+        cardFront.textContent = 'No cards available';
+        cardBack.textContent = '';
+    }
+}
+
+function setupNavigation(cards) {
+    document.getElementById('backwards').addEventListener('click', () => {
+        if (currentCardIndex > 0) {
+            currentCardIndex--;
+        } else {
+            currentCardIndex = cards.length - 1; // Loop to the last card
+        }
+        updateFlashcard(cards);
+    });
+
+    document.getElementById('forwards').addEventListener('click', () => {
+        if (currentCardIndex < cards.length - 1) {
+            currentCardIndex++;
+        } else {
+            currentCardIndex = 0; // Loop back to the first card
+        }
+        updateFlashcard(cards);
+    });
+}
+
+
+</script>
+
+
+
+
     <!--<script type="module" src="./createDeckModal/assets/newDeckModal.js">
         import * as data from '.newDeckModal.js';
         console.log(data);
@@ -339,6 +393,9 @@ console.log(decks);
             updateFlashcard();
         }
     });--> 
+
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script> src= "/Users/tanyapunater/Desktop/GWU/myrepos/flashCards-project1/createDeckModal/assets/newDeckModal.js"</script>
 </body>
