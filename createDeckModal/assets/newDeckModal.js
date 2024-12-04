@@ -58,7 +58,7 @@ let decks = JSON.parse(localStorage.getItem('decks')) || [];
         deckElement.textContent = deck.name;
         deckElement.dataset.index = index;
         deckElement.addEventListener('click', function () {
-          window.location.href = `study.html?deckIndex=${index}`;
+          window.location.href = '/Users/for3ver/Desktop/gwu/my-repos/flashCards-project1/study.html';
         });
         deckContainer.appendChild(deckElement);
       });
