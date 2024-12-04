@@ -1,6 +1,11 @@
+
 <a id="readme-top"></a>
 
 <h1 align="center">Quiz Me</h1>
+
+
+<!-- PROJECT LOGO -->
+
 
   <p align="center">
     QuizMe, an application designed to help students study by the use of flashcards. Our vision for QuizMe is to allow users the ability to create a variety of flashcard decks manually in which they’ll be able to navigate through each deck, next and previous, and reveal each answer with the click of the current card. QuizMe scores each study session by manual input from the user selecting if they knew the answer or not. 
@@ -52,6 +57,7 @@
 
 ### Built With
 
+
 * HTML: Structure of the web pages.
 * CSS: Styling of the components and layout.
 * JavaScript: Logic for adding, displaying, and storing decks and flashcards.
@@ -69,6 +75,7 @@
 <li>A code editor (optional) such as Visual Studio Code if you want to modify the project.</li>
 
 
+
 ### Installation
 
 1. Clone the repo
@@ -82,6 +89,7 @@
      <li>Install the Live Server extension in VS Code and run it.
   </ul>
    
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -156,6 +164,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 Nick Washington, Chase Jefferson, Tanya Punater, Ahmir Robinson
+
 
 Project Link: [https://github.com/arob2nice/flashCards-project1](https://github.com/arob2nice/flashCards-project1)
 
