@@ -47,6 +47,7 @@
         margin-top: 100px;
         text-align: center;
       }
+
        @media (max-width: 768px) {  /* making deck page mobile responsive */
         .deck-item {
           width: 100%;
