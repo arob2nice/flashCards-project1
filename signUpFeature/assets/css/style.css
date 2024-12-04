@@ -1,0 +1,52 @@
+section {
+    padding: 100px 0;
+    background-color: black;
+}
+
+.container {
+    max-width: 400px;
+    background-color: black;
+}
+
+.form-label {
+    font-size: 1.2rem;
+    color: white;
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+.btn {
+    font-size: 1.2rem;
+}
+
+.navbar-nav {
+    margin-left: auto;
+    
+}
+
+p {
+    color: white;
+
+}
+
+h1 {
+    color: white;
+}
+
+.lead {
+    color: white;
+} 
+
+.welcome {
+    color: white;
+}   
+
+.bold {
+    font-weight: bold;
+    font-style: italic;
+}
+
+
+
