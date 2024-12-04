@@ -34,22 +34,19 @@
       .deck-item:hover {
         transform: scale(1.05);
       }
-      
-      #new-deck-btn { 
-      position: absolute;
-      left: 0%;
-      top: 25%;
-      text-align: left; 
-      margin-left: 50px; 
-    }
-
+      #new-deck-btn {
+        position: absolute;
+        left: 0%;
+        top: 25%;
+        text-align: left;
+        margin-left: 50px;
+      }
       .Name {
-            text-align: left;
-            margin-top: 80px;
-            margin-left: 30px;
-            display: show;
-        }
-
+        text-align: left;
+        margin-top: 80px;
+        margin-left: 30px;
+        display: show;
+      }
       #no-deck {
         display: flex;
         justify-content: center;
@@ -58,7 +55,27 @@
         text-align: center;
       }
 
-    
+       @media (max-width: 768px) {  /* making this mobile responsive */
+        .deck-item {
+          width: 100%;
+          height: auto;
+          font-size: 16px;
+        }
+        #new-deck-btn {
+          position: static;
+          margin: 20px auto;
+          display: block;
+        }
+        .Name {
+          text-align: center;
+          margin-top: 20px;
+          margin-left: 0;
+        }
+        #no-deck {
+          margin-top: 50px;
+        }
+      }
+
     </style>
   </head>
   <body>
