@@ -58,12 +58,19 @@ let decks = JSON.parse(localStorage.getItem('decks')) || [];
         deckElement.textContent = deck.name;
         deckElement.dataset.index = index;
         deckElement.addEventListener('click', function () {
+
+          window.location.href = `study.html?deckIndex=${index}`;
+
         window.location.href = `/Users/tanyapunater/Desktop/GWU/myrepos/flashCards-project1/study.html?deckIndex=${index}`;
+
         });
         deckContainer.appendChild(deckElement);
       });
       document.getElementById('no-deck').style.display = decks.length > 0 ? 'none' : 'block';
     }
+
+    renderDecks();
+
     renderDecks();
 
       // loading user's name in the deck page
@@ -74,3 +81,4 @@ let decks = JSON.parse(localStorage.getItem('decks')) || [];
           }
         });
  
+
