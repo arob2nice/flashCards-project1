@@ -58,7 +58,7 @@ let decks = JSON.parse(localStorage.getItem('decks')) || [];
         deckElement.textContent = deck.name;
         deckElement.dataset.index = index;
         deckElement.addEventListener('click', function () {
-          window.location.href = `/Users/tanyapunater/Desktop/GWU/myrepos/flashCards-project1/study.html?deckIndex=${index}`;
+        window.location.href = `/Users/tanyapunater/Desktop/GWU/myrepos/flashCards-project1/study.html?deckIndex=${index}`;
         });
         deckContainer.appendChild(deckElement);
       });
