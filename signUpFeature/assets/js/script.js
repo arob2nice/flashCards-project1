@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         
         if (password == confirmPassword) {
-            window.location.href = 'login.html';
+            window.location.href = './signUpFeature/login.html';
         }
     }
     );});
