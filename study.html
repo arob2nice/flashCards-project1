@@ -128,6 +128,48 @@
         .backdeck:hover {
             color: white;
         }
+
+        @media (max-width: 768px) {
+    .navbar-nav {
+      flex-direction: column; /* Stack nav items vertically */
+      align-items: center; /* Center align nav items */
+    }
+    .btn {
+      margin: 10px auto; /* Center the button */
+      display: block; /* Ensure it’s a block element for centering */
+    }
+    .flash {
+      flex-direction: column; /* Stack elements vertically */
+      padding-top: 20px; /* Reduce padding for smaller screens */
+      height: auto; /* Allow height to adjust automatically */
+    }
+    .nav-buttons {
+      flex-direction: row; /* Keep buttons aligned horizontally */
+      justify-content: space-between; /* Adjust spacing */
+    }
+    #backwards, #forwards {
+      margin-top: 20px; /* Reduce margin for better spacing */
+      font-size: 20px; /* Adjust font size for buttons */
+    }
+    .card-wrapper {
+      width: 90%; /* Adjust width to fit smaller screens */
+      height: auto; /* Allow height to adjust */
+    }
+    .card-body {
+      box-shadow: none; /* Simplify shadow for smaller screens */
+    }
+    .mark {
+      margin: 10px auto; /* Center and reduce margins */
+      height: auto; /* Allow height to adjust */
+    }
+    .study-foot {
+      flex-direction: column; /* Stack footer items vertically */
+      align-items: center; /* Center align footer text */
+      text-align: center; /* Center text */
+    }
+  }
+
+
     </style>
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -399,6 +441,6 @@ function setupNavigation(cards) {
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script> src= "/Users/tanyapunater/Desktop/GWU/myrepos/flashCards-project1/createDeckModal/assets/newDeckModal.js"</script>
+    <script> src= "./createDeckModal/newDeckModal.js"</script>
 </body>
 </html>
