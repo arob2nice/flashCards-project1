@@ -61,7 +61,7 @@ let decks = JSON.parse(localStorage.getItem('decks')) || [];
 
           window.location.href = `study.html?deckIndex=${index}`;
 
-        window.location.href = `/Users/tanyapunater/Desktop/GWU/myrepos/flashCards-project1/study.html?deckIndex=${index}`;
+        window.location.href = `study.html?deckIndex=${index}`;
 
         });
         deckContainer.appendChild(deckElement);
