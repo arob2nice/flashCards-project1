@@ -59,9 +59,7 @@ let decks = JSON.parse(localStorage.getItem('decks')) || [];
         deckElement.dataset.index = index;
         deckElement.addEventListener('click', function () {
 
-          window.location.href = `study.html?deckIndex=${index}`;
-
-        window.location.href = `study.html?deckIndex=${index}`;
+          window.location.href = `../study.html?deckIndex=${index}`;
 
         });
         deckContainer.appendChild(deckElement);
